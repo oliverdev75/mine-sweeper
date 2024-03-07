@@ -16,4 +16,4 @@ java MineSweeper.java
 ```
 
 Example:
-[Mine Sweeper](minesweeper.png)
+![Mine Sweeper](https://raw.githubusercontent.com/twister91/mine-sweeper/master/minesweeper.png)
