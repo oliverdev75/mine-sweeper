@@ -3,109 +3,108 @@
  * <p>
  * Description:
  * <p>
- * This is the game of Mine Sweeper, where you have a board with a series of hidden mines
- * distributed along it, and you have to discover all the positions where there are no
- * mines to win, guided by the count of mines around the positions you are indicating.
- * <p>
- * If you discover a mine you loose and the game will show you the rest of mines, also
- * asks you for his name to save it with all the game information
- * (board size, board mines, etc.) in the games logs.
- * <p>
- * If you want to save a game to continue it later, you can run the 'save' command, and
- * the game will ask you for the name which you give to the game, so that later you can
- * identify and select it.
- * <p>
- * Also you can leave the game without saving or logging it by running 'leave'.
+     * This is the game of Mine Sweeper, where you have a board with a series of hidden mines
+     * distributed along it, and you have to discover all the positions where there are no
+     * mines to win, guided by the count of mines around the positions you are indicating.
+     * <p>
+     * If you discover a mine you loose and the game will show you the rest of mines, also
+     * asks you for his name to save it with all the game information
+     * (board size, board mines, etc.) in the games logs.
+     * <p>
+     * If you want to save a game to continue it later, you can run the 'save' command, and
+     * the game will ask you for the name which you give to the game, so that later you can
+     * identify and select it.
+     * <p>
+     * Also you can leave the game without saving or logging it by running 'leave'.
  * <p>
  * Operation:
  * <p>
- * When you execute the game the first you see is the main menu, with these options:
+ *     When you execute the game the first you see is the main menu, with these options:
  * <p>
- * 1.New game
- * 2.Continue a game
- * 3.Show games
- * 4.Exit
+         * 1.New game
+         * 2.Continue a game
+         * 3.Show games
+         * 4.Exit
  * <p>
- * - New game:
+ *     - New game:
  * <p>
- * Will show you two more menus where you will decide the board size and its quantity
- * of mines:
+             * Will show you two more menus where you will decide the board size and its quantity
+             * of mines:
  * <p>
- * Size:
+ *             Size:
  * <p>
- * 1.Small (4x4)
- * 2.Medium (8x8)
- * 3.Big (12x12)
+                 * 1.Small (4x4)
+                 * 2.Medium (8x8)
+                 * 3.Big (12x12)
  * <p>
- * Board mines:
+ *             Board mines:
  * <p>
- * 1.Few (20% of mines)
- * 2.Medium (30% of mines)
- * 3.Big (40% of mines)
+                 * 1.Few (20% of mines)
+                 * 2.Medium (30% of mines)
+                 * 3.Big (40% of mines)
  * <p>
- * Later you will see the board where you will play giving to the prompt (> ) the
- * position that you want to discover giving the combination of row and column, in
- * this order, separated by a hyphen (2-4).
+             * Later you will see the board where you will play giving to the prompt (> ) the
+             * position that you want to discover giving the combination of row and column, in
+             * this order, separated by a hyphen (2-4).
  * <p>
- * Here's an example (8x8):
+ *             Here's an example (8x8):
  * <p>
- * 1  2  3  4  5  6  7  8
- * 1 ·  ·  ·  ·  ·  ·  ·  ·
- * 2 ·  ·  ·  ·  ·  ·  ·  ·
- * 3 ·  ·  ·  ·  2  ·  ·  ·
- * 4 ·  ·  ·  ·  ·  ·  ·  ·
- * 5 ·  ·  ·  ·  ·  ·  ·  ·
- * 6 ·  ·  ·  ·  ·  ·  ·  ·
- * 7 ·  ·  ·  ·  ·  ·  ·  ·
- * 8 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 1  2  3  4  5  6  7  8
+                     * 1 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 2 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 3 ·  ·  ·  ·  2  ·  ·  ·
+                     * 4 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 5 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 6 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 7 ·  ·  ·  ·  ·  ·  ·  ·
+                     * 8 ·  ·  ·  ·  ·  ·  ·  ·
  * <p>
- * >3-5
+ *                  >3-6
  * <p>
- * * The '·' are the indiscovered positions and the hideout of the mines unless you
- * have enabled the mines positions revealing, then you will see '*' as mines.
- * See cheat mode *
- * <p>
- * <p>
- * Additional game options:
- * <p>
- * - Game saving: allows you to save the game in the state that it was to
- * continue is later. You have to give a name game to identify it.
- * Run: save
- * <p>
- * - Game leaving: this option gets you out of the game without saving or logging
- * it.
- * Run: leave
- * <p>
- * - cheat mode: enables the revealing of mines positions when you see the board.
- * Run: cheat
- * <p>
- * - Normal mode: disables the cheat mode, hidding the mines positions again
- * (default mode).
- * Run: normal
+             * * The '·' are the indiscovered positions and the hideout of the mines unless you
+             * have enabled the mines positions revealing, then you will see '*' as mines.
+             * See cheat mode *
  * <p>
  * <p>
- * - Continue a game:
+         * Additional game options:
  * <p>
- * This choice will list you all saved games so you can choose one:
- * <p>
- * 1.First game
- * 2.One game
- * <p>
- * Choose an option: 2
- * <p>
- * Then the game will load the chosen game so you can play from where you leave off.
- * The playing operation is the same as "New Game". See New Game *
- * <p>
- * - Show games:
- * <p>
- * List all the games logs showing this information: player name, board size, mines quanity,
- * win or lost, date and time of gameplay.
- * <p>
- * - Exit:
- * <p>
- * Asks you if you want to get out of the game and if the answer is 'y' or 'Y' the game will
- * stop its execution leaving you out of it. If the answer isn't any of these the game will
- * keep going.
+             * - Game saving: allows you to save the game in the state that it was to
+             * continue is later. You have to give a name game to identify it.
+             * Run: save
+             
+             * - Game leaving: this option gets you out of the game without saving or logging
+             * it.
+             * Run: leave
+
+             * - cheat mode: enables the revealing of mines positions when you see the board.
+             * Run: cheat
+             
+             * - Normal mode: disables the cheat mode, hidding the mines positions again
+             * (default mode).
+             * Run: normal
+             
+             * - Continue a game:
+             
+             * This choice will list you all saved games so you can choose one:
+             
+             * 1.First game
+             * 2.One game
+             
+             * Choose an option: 2
+             
+             * Then the game will load the chosen game so you can play from where you leave off.
+             * The playing operation is the same as "New Game". See New Game *
+             
+             * - Show games:
+             
+             * List all the games logs showing this information: player name, board size, mines quanity,
+             * win or lost, date and time of gameplay.
+             
+             * - Exit:
+             
+             * Asks you if you want to get out of the game and if the answer is 'y' or 'Y' the game will
+             * stop its execution leaving you out of it. If the answer isn't any of these the game will
+             * keep going.
  *
  * @author Oliver Ros
  */
@@ -125,7 +124,7 @@ public class MineSweeper {
 
     // These properties control the board output. You can change them as you want.
     private static final char TABLE_VISUAL_UNCHARTED_CELL = '.'; // Undiscovered positions
-    private static final char TABLE_VISUAL_MINE = '*'; // If revealing mines is active this en every mine position will appear this
+    private static final char TABLE_VISUAL_MINE = '*'; // If revealing mines is active in every mine position will appear this
     private static final String PLAY_PROMPT = "> "; // This is the prompt used in the game
 
 
